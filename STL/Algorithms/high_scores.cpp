@@ -90,4 +90,15 @@ srand(static_cast<unsigned int>(time(0)));
 Then I reorder the scores in a random way.
 random_shuffle(scores.begin(), scores.end());
 
+A very cool property of STL algorithms is that they can work with containers defined outside of the
+STL. These containers only have to meet certain requirements. For example, even though string
+objects are not part of the STL, you can use appropriate STL algorithms on them. The following
+code snippet demonstrates this:
+string word = "High Scores";
+random_shuffle(word.begin(), word.end());
+The preceding code randomly shuffles the characters in word. As you can see, string objects
+have both begin() and end() member functions, which return iterators to the first character
+and one past the last character, respectively. That’s part of the reason why STL algorithms work
+with strings—because they’re designed to.
+
 */
