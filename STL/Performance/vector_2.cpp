@@ -37,7 +37,12 @@ int main()
     cout << "Vector capacity is:" << scores.capacity() << endl;
 
     cout << "Adding a score.\n";
-// scores.push_back(0); //memory is reallocated to accommodate growth
+scores.push_back(0); //memory is reallocated to accommodate growth
+cout << "Vector size is :" << scores.size() << endl;
+cout << "Vector capacity is:" << scores.capacity() << endl;
+
+scores.push_back(20); //add another score
+cout << "Adding another score.\n";
 cout << "Vector size is :" << scores.size() << endl;
 cout << "Vector capacity is:" << scores.capacity() << endl;
 
